@@ -5,8 +5,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    
     # Gom tất cả API con lại
+    path('api/news/', include('news.urls')),
     path('api/about/', include('about.urls')),
     path('api/hero/', include('hero.urls')),
     path('api/projects/', include('projects.urls')),

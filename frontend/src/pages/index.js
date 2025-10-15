@@ -1,19 +1,9 @@
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Projects from '../components/Projects';
-import Technologies from '../components/Technologies';
-import Testimonials from '../components/Testimonials';
-import Contact from '../components/Contact';
+import News from "../components/News";
 
 const Home = () => {
   return (
     <div id='home'>
-      <Hero />
-      <About />
-      <Projects />
-      <Technologies />
-      <Testimonials />
-      <Contact />
+	  <News />  
     </div>
   );
 };

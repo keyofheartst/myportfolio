@@ -36,6 +36,7 @@ INSTALLED_APPS = [
   'contact',
   'hero',
   'footer',
+  'news',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,16 @@ MIDDLEWARE = [
   'django.contrib.messages.middleware.MessageMiddleware',
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True  # Cho phép truy cập từ frontend
+
+# Dùng cache SQLite (mặc định)
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'cache_table',
+    }
+}
 
 ROOT_URLCONF = 'config.urls'
 
@@ -66,6 +77,15 @@ TEMPLATES = [
     },
   },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
