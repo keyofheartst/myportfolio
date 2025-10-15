@@ -1,0 +1,9 @@
+1. Web đã chạy thành công (cả admin lẫn user)
+2. Cấu trúc web không phải dạng mvc , front gọi back rồi back 
+lấy data render, back parse kết quả hiển thị 
+mà là dạng front gọi back thông qua api ,back trả data dạng json
+nextjs sẽ parse kết quả ra và render theo cơ chế của nextjs
+3. để chạy web cần chạy cả back lẫn front
+back chạy django như bt , front chạy lệnh npm run dev
+app sẽ chạy trên cổng localhost:3000
+4. Việc tiếp theo cần bổ sung các module để hoàn thiện blog
