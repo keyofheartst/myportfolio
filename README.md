@@ -1,28 +1,4 @@
-# Portfolio Website
-
-This is a portfolio website built using **Django 4**, **Django REST Framework 3**, **Next.js 13**, and **Material UI 5**. The app uses a **PostgreSQL** database to store data.
-
-![plot](https://github.com/BobsProgrammingAcademy/portfolio-website-django-next.js/blob/master/frontend/public/images/main.png?raw=true)
-
-## Table of Contents
-
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the application](#run-the-application)
-- [Running the tests](#run-the-tests)
-- [Adding data to the application](#add-data-to-the-application)
-- [Customizing the application](#customize-the-application)
-- [Copyright and License](#copyright-and-license)
-
-## Prerequisites
-
-Install the following prerequisites:
-
-1. [Python 3.8-3.11](https://www.python.org/downloads/)
-   <br> This project uses **Django v4.2.4**. For Django to work, you must install a correct version of Python on your machine. More information [here](https://django.readthedocs.io/en/stable/faq/install.html).
-2. [Node.js](https://nodejs.org/en/)
-3. [PostgreSQL](https://www.postgresql.org/download/)
-4. [Visual Studio Code](https://code.visualstudio.com/download)
+# Portfolio Website 
 
 ## Installation
 
@@ -43,13 +19,6 @@ python -m venv venv
 #### 2. Activate the virtual environment
 
 From the **backend** directory, run:
-
-On macOS:
-
-```bash
-source venv/bin/activate
-```
-
 On Windows:
 
 ```bash
@@ -64,39 +33,7 @@ From the **backend** directory, run:
 pip install -r requirements.txt
 ```
 
-#### 4. Set up a PostgreSQL database
-
-With **PostgreSQL** up and running, in a new Terminal window, run:
-
-```bash
-dropdb --if-exists portfolio
-```
-
-Start **psql**, which is a terminal-based front-end to PostgreSQL, by running the command:
-
-```bash
-psql postgres
-```
-
-Create a new PostgreSQL database:
-
-```sql
-CREATE DATABASE portfolio;
-```
-
-Create a new database admin user:
-
-```sql
-CREATE USER yourusername WITH SUPERUSER PASSWORD 'yourpassword';
-```
-
-To quit **psql**, run:
-
-```bash
-\q
-```
-
-#### 5. Set up backend environment variables
+#### 4. Set up backend environment variables
 
 From the **backend** directory, run:
 
@@ -168,7 +105,7 @@ Next, declare environment variables in the **.env** file. Make sure you don't us
 
 ```bash
 BACKEND_HOST=127.0.0.1
-BACKEND_URL=http://127.0.0.1:8000
+BACKEND_URL=http://127.0.0.1:8003
 ```
 
 ## Run the application
@@ -217,7 +154,7 @@ npm run test
 
 Add data through Django Admin.
 
-Go to http://127.0.0.1:8000/admin to access the Django Admin interface and sign in using the admin credentials.
+Go to http://127.0.0.1:8003/admin to access the Django Admin interface and sign in using the admin credentials.
 
 ## Customize the application
 
@@ -260,7 +197,3 @@ To modify the logo in the application, make changes in the `frontend/src/layout/
 ### Changing Buttons in the Hero Section
 
 To modify the two buttons in the Hero section, make changes in the `frontend/src/components/HeroButtons.js` file.
-
-## Copyright and License
-
-Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
